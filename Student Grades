@@ -1,0 +1,57 @@
+// Program Used to calculate Student Grades
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int count = 0, i = 0, sum = 0, avg, grade = 0, v;
+    char gradescale;
+    int grades[10];
+
+    cout << "Lets calculate student grades!\n\n";
+
+    while (grade != 999) {
+        
+        cout << "Enter student quiz grade: " << (count + 1) << endl;
+        cin >> v;
+        grades[count] = v;
+
+        count++;
+        if (count == 10)
+            grade = 999;
+    }
+
+    cout << "\n\nThe 10 quiz grades are:" << endl;
+    for (i = 0; i < 10; i++) {
+        cout << grades[i] << ", ";
+    }
+    cout << endl;
+
+    for (i = 0; i < 10; i++) {
+        sum = sum + grades[i];
+    }
+    avg = sum / 10;
+    cout << "\n\nThe average grade for 10 quizzes is: " << avg << endl;
+
+    if (avg >= 90 && avg <= 100) {
+        gradescale = 'A';
+    }
+    else if (avg >= 80 && avg <= 89) {
+        gradescale = 'B';
+    }
+    else if (avg >= 70 && avg <= 79) {
+        gradescale = 'C';
+    }
+    else if (avg >= 60 && avg <= 69) {
+        gradescale = 'D';
+    }
+    else {
+        gradescale = 'F';
+    }
+    cout << "\n\nThe grade scale for 10 quizzes is: " << gradescale << endl;
+
+    system("pause");
+    return 0;
+}
+
+
