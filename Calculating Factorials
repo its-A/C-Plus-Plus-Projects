@@ -1,0 +1,30 @@
+//Calculating Factorials
+
+#include<iostream>   
+
+using namespace std;
+
+int main()
+{
+    int factorial(int);
+    int fact, value;
+    cout << "Lets Calculate the Factorial!\n\n";
+    cout << "Enter any number: ";
+    cin >> value;
+    fact = factorial(value);
+    cout << "The Factorial of " << value << " is : " << fact << endl;
+    
+    system("pause");
+    return 0;
+}
+int factorial(int Num)
+{
+    if (Num < 0)
+        return(-1); /*Wrong value*/
+    if (Num == 0)
+        return(1);  /*Terminating condition*/
+    else
+    {
+        return(Num * factorial(Num - 1));
+    }
+}
