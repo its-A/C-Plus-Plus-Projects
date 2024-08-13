@@ -1,0 +1,24 @@
+//Program that asks the user to enter the replacement costs of a building and then displays the min amount 
+//of insurance that should be purchased for the property
+
+#include <iostream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    double propertyCost, insurance;
+    cout << "Calculating Min Amount of Property Insurance \n\n"; //new line
+    cout << "How much does your property cost?" << endl;
+    cin >> propertyCost; //allows user to enter cost
+
+    insurance = (propertyCost * 0.8); //muliplies amount user enter and multiplies it by .8
+
+    cout << setprecision(2) << fixed; //set the number of decimal places for floating point values
+    cout << "The minimum amount of insurance you should purchase is $" << insurance << endl;
+
+    system("pause");
+    return(0);
+}
