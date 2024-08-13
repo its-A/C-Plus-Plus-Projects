@@ -1,0 +1,22 @@
+/* Writting a program that uses a loop to display the characters 
+for the ASCII codes 0 through 127. Displaying 16 characters on each line.*/
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    char asciiCode;
+    for (int i = 32; i <= 127; i++) //function to loop through characters
+    {
+        asciiCode = i;
+        cout << asciiCode << " "; //adding space in between
+
+        if (i % 16 == 0) //telling the program we need 16 characters in each line
+            cout << endl;
+    }
+    cout << endl;
+
+    
+    return 0;
+}
